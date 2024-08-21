@@ -7,6 +7,6 @@
  */
 char *get_path(void)
 {
-    return (_getenv("PATH"));
+	return (_getenv("PATH"));
 }
 
