@@ -8,15 +8,15 @@
  */
 void print_to_stdout(char *string)
 {
-    size_t length;
-    ssize_t num_written;
+	size_t length;
+	ssize_t num_written;
 
-    length = _strlen(string);
-    num_written = write(STDOUT_FILENO, string, length);
-    if (num_written == -1)
-    {
-        perror("write");
-    }
+	length = _strlen(string);
+	num_written = write(STDOUT_FILENO, string, length);
+	if (num_written == -1)
+	{
+	perror("write");
+	}
 }
 
 /**
@@ -27,14 +27,14 @@ void print_to_stdout(char *string)
  */
 void print_to_stderr(char *error_msg)
 {
-    size_t length;
-    ssize_t num_written;
+	size_t length;
+	ssize_t num_written;
 
-    length = _strlen(error_msg);
-    num_written = write(STDERR_FILENO, error_msg, length);
-    if (num_written == -1)
-    {
-        perror("write");
-    }
+	length = _strlen(error_msg);
+	num_written = write(STDERR_FILENO, error_msg, length);
+	if (num_written == -1)
+	{
+	perror("write");
+	}
 }
 
